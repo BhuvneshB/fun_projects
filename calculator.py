@@ -20,7 +20,7 @@ buttons = [
     '7', '8', '9', '/',
     '4', '5', '6', '*',
     '1', '2', '3', '-',
-    '0', '.', '^', '+'
+    '0', '.', 'x^y', '+'
 ]
 
 row, col = 2, 0
@@ -35,7 +35,7 @@ for button_text in buttons:
 tk.Button(root, text="C", width=5, command=lambda: entry.delete(0, tk.END)).grid(row=6, column=0, columnspan=2, padx=5, pady=5, sticky="nsew")
 
 # Button to calculate the result
-tk.Button(root, text="=", width=5, command=calculate).grid(row=5, column=2, columnspan=2, padx=5, pady=5, sticky="nsew")
+tk.Button(root, text="=", width=5, command=calculate).grid(row=6, column=2, columnspan=2, padx=5, pady=5, sticky="nsew")
 
 # Label to display the result
 output_label = tk.Label(root, text="Result: ")
