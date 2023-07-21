@@ -20,10 +20,10 @@ buttons = [
     '7', '8', '9', '/',
     '4', '5', '6', '*',
     '1', '2', '3', '-',
-    '0', '.', '=', '+'
+    '0', '.', '^', '+'
 ]
 
-row, col = 1, 0
+row, col = 2, 0
 for button_text in buttons:
     tk.Button(root, text=button_text, width=5, command=lambda text=button_text: entry.insert(tk.END, text)).grid(row=row, column=col, padx=5, pady=5, sticky="nsew")
     col += 1
@@ -32,14 +32,14 @@ for button_text in buttons:
         row += 1
 
 # Button to clear the entry
-tk.Button(root, text="C", width=5, command=lambda: entry.delete(0, tk.END)).grid(row=5, column=0, columnspan=2, padx=5, pady=5, sticky="nsew")
+tk.Button(root, text="C", width=5, command=lambda: entry.delete(0, tk.END)).grid(row=6, column=0, columnspan=2, padx=5, pady=5, sticky="nsew")
 
 # Button to calculate the result
 tk.Button(root, text="=", width=5, command=calculate).grid(row=5, column=2, columnspan=2, padx=5, pady=5, sticky="nsew")
 
 # Label to display the result
 output_label = tk.Label(root, text="Result: ")
-output_label.grid(row=6, column=0, columnspan=4, padx=10, pady=10, sticky="ew")
+output_label.grid(row=1, column=0, columnspan=4, padx=10, pady=10, sticky="ew")
 
 # Make rows and columns resizable
 for r in range(7):
